@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+:root {
+  --cyan: 179, 62%, 43%;
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: 218, 22%, 67%;
+}
+
+body {
+  font-size: 16px;
+  font-family: Karla;
+  margin: 0;
+  padding: 2rem;
+  height: 100vh;
+  background-color: hsla(var(--grayish-blue), 0.3);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas: "detail" "price" "footer";
+}
+
+.detail {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+  grid-area: detail;
+}
+
+.title {
+  color: hsla(var(--cyan), 1);
+}
+
+.sub-title {
+  color: var(--bright-yellow);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: hsla(var(--grayish-blue), 1);
+  line-height: 35px;
+}
+
+.price {
+  background-color: hsla(var(--cyan), 1);
+  padding: 2rem;
+  grid-area: price;
+}
+
+.price-title {
+  color: var(--light-gray);
+  font-size: x-large;
+  font-weight: 500;
+}
+
+.currency {
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  vertical-align: middle;
+}
+
+.duration {
+  font-size: medium;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.plan-details {
+  color: white;
+}
+
+.buy {
+  border: none;
+  width: 100%;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--bright-yellow);
+  font-size: larger;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: hsla(var(--cyan), 0.7);
+  grid-area: footer;
+}
+
+.footer-title {
+  color: white;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.footer-details {
+  color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 426px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+      "detail detail"
+      "price  footer";
+  }
+}
