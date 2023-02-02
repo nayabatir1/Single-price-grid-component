@@ -14,6 +14,10 @@ body {
   padding: 2rem;
   height: 100vh;
   background-color: hsla(var(--grayish-blue), 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 main {
@@ -116,6 +120,7 @@ main {
 
 @media (min-width: 426px) {
   main {
+    max-width: 50rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas:
